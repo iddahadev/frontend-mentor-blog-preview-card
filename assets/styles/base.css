@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("../fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+}
+
+:root {
+  --color-primary: #f4d04e;
+  --color-white: #fff;
+  --color-black: #111;
+  --color-grey: #7f7f7f;
+
+  --font-family: Figtree;
+
+  line-height: 1.5;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+body,
+p,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}

@@ -18,37 +18,45 @@
       name="description"
       content="This is the Blog Preview Card component challenge from Frontend Mentor"
     />
+
+    <link href="./assets/styles/index.css" rel="stylesheet" />
   </head>
   <body>
     <main>
-      <article tabindex="0">
+      <article class="card" tabindex="0">
         <img
+          class="card__image"
           tabindex="-1"
           src="./assets/images/illustration-article.svg"
           alt="Colorful graphics"
         />
 
-        <!-- The heading is h1 since there is no other heading in this page -->
-        <h1>HTML & CSS foundations</h1>
-        <p>Published <time datetime="2023-12-21">21 Dec 2023</time></p>
+        <div class="card--body">
+          <!-- The heading is h1 since there is no other heading in this page -->
+          <h1 class="card__title">HTML & CSS foundations</h1>
+          <p class="card__date">
+            Published <time datetime="2023-12-21">21 Dec 2023</time>
+          </p>
 
-        <!-- Could be a ul if article has multiple tags, could be wrapped in a element to navigate to tag page. -->
-        <p aria-label="Blog article category">Learning</p>
+          <!-- Could be a ul if article has multiple tags, could be wrapped in a element to navigate to tag page. -->
+          <p class="card__tag" aria-label="Blog article category">Learning</p>
 
-        <p aria-label="Blog article description">
-          These languages are the backbone of every website, defining structure,
-          content, and presentation.
-        </p>
+          <p class="card__description" aria-label="Blog article description">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </div>
 
         <!-- I went with figure and figcaption for author's avatar and name -->
-        <figure aria-label="Blog article author">
+        <figure class="card--author" aria-label="Blog article author">
           <img
+            class="card--author__image"
             src="./assets/images/image-avatar.webp"
             alt="Profile picture of Greg Hooper"
             width="32"
             height="32"
           />
-          <figcaption>Greg Hooper</figcaption>
+          <figcaption class="card--author__name">Greg Hooper</figcaption>
         </figure>
       </article>
     </main>
