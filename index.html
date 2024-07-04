@@ -39,16 +39,16 @@
           </p>
 
           <!-- Could be a ul if article has multiple tags, could be wrapped in a element to navigate to tag page. -->
-          <p class="card__tag" aria-label="Blog article category">Learning</p>
+          <p class="card__tag" aria-label="Article category">Learning</p>
 
-          <p class="card__description" aria-label="Blog article description">
+          <p class="card__description" aria-label="Article description">
             These languages are the backbone of every website, defining
             structure, content, and presentation.
           </p>
         </div>
 
         <!-- I went with figure and figcaption for author's avatar and name -->
-        <figure class="card--author" aria-label="Blog article author">
+        <figure class="card--author" aria-label="Article author">
           <img
             class="card--author__image"
             src="./assets/images/image-avatar.webp"
@@ -56,7 +56,9 @@
             width="32"
             height="32"
           />
-          <figcaption class="card--author__name">Greg Hooper</figcaption>
+          <figcaption aria-label="Author name" class="card--author__name">
+            Greg Hooper
+          </figcaption>
         </figure>
       </article>
     </main>
