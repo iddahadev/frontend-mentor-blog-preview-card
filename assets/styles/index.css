@@ -5,7 +5,7 @@ body {
   background-color: var(--color-primary);
 
   font-family: var(--font-family);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--color-black);
 }
 
@@ -22,9 +22,8 @@ img {
 }
 
 .card {
-  --max-width: 20.4375rem;
-
-  max-width: var(--max-width);
+  max-width: 20.4375rem;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -39,7 +38,7 @@ img {
   border-radius: 20px;
 
   box-shadow: 8px 8px 0px 0px #000;
-  transition: box-shadow 0.5s;
+  transition: box-shadow var(--transition-duration);
 }
 
 .card:focus,
@@ -65,25 +64,19 @@ img {
 }
 
 .card__title {
-  --font-size: 1.25rem;
-
   order: 2;
-  font-size: var(--font-size);
-  font-weight: 800;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-extra-bold);
 
-  transition: color 0.5s;
+  transition: color var(--transition-duration);
 }
 
 .card__date {
-  --font-size: 0.75rem;
-
   order: 1;
-  font-size: var(--font-size);
+  font-size: var(--font-size-12);
 }
 
 .card__tag {
-  --font-size: 0.75rem;
-
   order: 0;
 
   display: inline-block;
@@ -93,25 +86,21 @@ img {
   padding: 4px 12px;
   border-radius: 4px;
 
-  font-size: var(--font-size);
-  font-weight: 800;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-extra-bold);
 }
 
 .card__description {
-  --font-size: 0.875rem;
-
   order: 3;
 
-  font-size: var(--font-size);
+  font-size: var(--font-size-14);
   color: var(--color-grey);
 }
 
 .card--author {
-  --column-gap: 0.75rem;
-
   display: flex;
   align-items: center;
-  column-gap: var(--column-gap);
+  column-gap: 0.75rem;
 }
 
 .card--author__image {
@@ -120,28 +109,28 @@ img {
 }
 
 .card--author__name {
-  font-size: 0.875rem;
-  font-weight: 800;
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-extra-bold);
 }
 
-@media (min-width: 75rem) {
+@media (min-width: 90rem) {
   .card {
-    --max-width: 24rem;
+    max-width: 24rem;
   }
 
   .card__title {
-    --font-size: 1.5rem;
+    font-size: var(--font-size-24);
   }
 
   .card__date {
-    --font-size: 0.875rem;
+    font-size: var(--font-size-14);
   }
 
   .card__tag {
-    --font-size: 0.875rem;
+    font-size: var(--font-size-14);
   }
 
   .card__description {
-    --font-size: 1rem;
+    font-size: var(--font-size-16);
   }
 }
